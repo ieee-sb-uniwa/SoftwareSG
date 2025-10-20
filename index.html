@@ -132,8 +132,10 @@
   <aside class="sidebar">
     <h2>Navigation</h2>
     <div class="nav-item active" data-tab="home"><span>🏠</span> Home</div>
+    <div class="nav-item" data-tab="bootcamp"><span>📖</span> Training Guide</div>
     <div class="nav-item" data-tab="git"><span>🐙</span> Git / GitHub</div>
     <div class="nav-item" data-tab="code"><span>💻</span> C# / Java</div>
+    <div class="nav-item" data-tab="api"><span>🌐</span> Restful APIs</div>
   </aside>
 
   <!-- Main Content -->
@@ -261,7 +263,34 @@
         </div>
       </div>
     `,
-
+    bootcamp: `
+      <div class="section">
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h1 class="card-title">📖 Training Guide</h1>
+            <h3>Software SG Bootcamp</h3>
+            <p class="card-text">
+              Our projects can be pretty advanced, so we’ve set up a short bootcamp to help our beginner members get ready to join in. Each project corresponds to a training module.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h3 class="card-title">📅 My UniWA Schedule - API</h3>
+            <p class="card-text">
+              If you want to work on the API of My UniWA schedule you will need to learn the basics of API development. Visit the following training modules:
+              <ul>
+                <li>Git & GitHub module since all teams use them for version control.</li>
+                <li>C# module since the API is written with it.</li> 
+                <li>Rest API module to learn how APIs function</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    `,
       git: `
       <div class="section">
         <div class="card bg-dark text-light shadow mb-4">
@@ -269,7 +298,7 @@
             <h1 class="card-title">🐙 Git / GitHub</h1>
             <h2>Version Control Basics</h2>
             <p class="card-text">
-              Study the Git and GitHub fundamentals provided in our Drive. Once you’re confident, take the quiz below to test your knowledge!
+              Study the Git and GitHub fundamentals presentation provided in our Drive. Once you’re confident, take the quiz below to test your knowledge!
             </p>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9s0P16gw6QuKMbi6Eb2w0xVbn1d3mvjV_h1_K1wyy_Jjm7w/viewform?usp=dialog" 
               target="_blank" class="btn btn-primary mt-2">
@@ -385,6 +414,98 @@ Learning Objectives:
         </div>
       </div>
     `,
+    api: `
+      <div class="section">
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h1 class="card-title">🌐 Rest APIs using .NET </h1>
+            <h3>Programming Tutorial</h3>
+            <p class="card-text">
+              Study the tutorial and then complete the library project to test your new skills.
+            </p>
+            <p>📘 <a href="https://www.youtube.com/watch?v=Y2DpFNHtjA8" target="_blank" class="text-info">Tutorial (YouTube)</a></p>
+          </div>
+        </div>
+
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h1 class="card-title">📚 Library Management System API – Project Description</h1>
+            <pre><code>
+📘 Project: Library Management System (REST API)
+
+Overview:
+In this project, you will build a basic RESTful API that simulates the operations of a small library.
+The system will allow users to manage books, borrow and return them, and track their availability — all through HTTP requests 
+(no user interface required).
+
+The goal is to help you practice Model–Controller architecture in .NET, apply object-oriented programming (OOP) principles, 
+and understand how data flows between the model and controller in a Web API context.
+
+------------------------------------------------------------
+
+Learning Objectives:
+- Design and implement object-oriented models in C#
+- Use ASP.NET Core Controllers to handle REST API requests
+- Perform CRUD operations (Create, Read, Update, Delete) on in-memory data
+- Apply encapsulation, inheritance, and polymorphism in practical code
+- Understand how APIs communicate using JSON
+
+------------------------------------------------------------
+
+Features & Requirements:
+Your API should support the following features:
+
+1. Add a Book – Create a new book entry (title, author, ISBN)
+2. View All Books – Retrieve a list of all books in the library
+3. Search for a Book – Retrieve a specific book by title
+4. Borrow a Book – Mark a book as borrowed (unavailable)
+5. Return a Book – Mark a book as returned (available)
+
+Books should include:
+- title : string
+- author : string
+- isbn : string
+- isAvailable : boolean (default: true)
+
+You should also implement a DigitalBook class that inherits from Book and adds:
+- fileSizeMB : double
+
+------------------------------------------------------------
+
+Suggested Structure:
+Models:
+- Book
+- DigitalBook (extends Book)
+- User (tracks borrowed books)
+
+Controller:
+- LibraryController – handles all HTTP requests for managing books
+
+------------------------------------------------------------
+
+Example API Endpoints:
+Action              Method   URL                          Body Example
+---------------------------------------------------------------------------
+Get all books       GET      /api/library                 (none)
+Add a book          POST     /api/library                 { "title": "Dune", "author": "Frank Herbert", "isbn": "12345" }
+Search by title     GET      /api/library/Dune            (none)
+Borrow a book       PUT      /api/library/borrow/Dune     (none)
+Return a book       PUT      /api/library/return/Dune     (none)
+
+------------------------------------------------------------
+
+Tools & Frameworks:
+- .NET 8 SDK
+- ASP.NET Core Web API
+- Visual Studio
+- Postman (for testing API endpoints)
+
+</code></pre>
+
+          </div>
+        </div>
+      </div>
+    `,
     };
 
     tabs.forEach(tab => {
@@ -397,7 +518,5 @@ Learning Objectives:
     });
   </script>
 
-
 </body>
-
 </html>
