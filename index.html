@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <title>Software SG</title>
+  <style>
+    /* === Base Styles === */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      height: 100vh;
+      background-color: #1e1f23;
+      color: #e4e4e4;
+    }
+
+    /* === Sidebar === */
+    .sidebar {
+      width: 240px;
+      background-color: #2a2b31;
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .sidebar h2 {
+      color: #9ca3af;
+      font-size: 14px;
+      margin: 20px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      margin-bottom: 6px;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #e5e7eb;
+      transition: all 0.2s ease;
+    }
+
+    .nav-item:hover {
+      background-color: #3a3b42;
+    }
+
+    .nav-item.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+    .nav-item span {
+      font-size: 18px;
+    }
+
+    /* === Main Content === */
+    .main {
+      flex: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #f0f0f0;
+    }
+
+    pre {
+      background: #2e3035;
+      color: #c9d1d9;
+      padding: 16px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+
+    .section {
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(5px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        flex-direction: row;
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      .nav-item {
+        flex: 1;
+        justify-content: center;
+      }
+
+      .main {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h2>Navigation</h2>
+    <div class="nav-item active" data-tab="home"><span>🏠</span> Home</div>
+    <div class="nav-item" data-tab="git"><span>🐙</span> Git / GitHub</div>
+    <div class="nav-item" data-tab="code"><span>💻</span> C# / Java</div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main" id="main-content">
+    <div class="section" id="home">
+      <h1 style="text-align: center;">💻 Welcome to the Software Scientific Group Hub of IEEE SB UniWA</h1>
+        <br>
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h2 class="card-title">🏠 Home</h2>
+            <p class="card-text">
+              🎓 This is the main hub for our members interested in learning about the tools we use in our projects. Explore the side menu to access our training guide.
+            </p>
+          </div>
+        </div>
+
+        <h2 style="text-align: center;">Our Projects</h2>
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h3 class="card-title">📅 My UniWA Schedule</h3>
+            <p class="card-text">Development of an app and web platform that allows students to organize and track their course schedule.</p>
+            <h6>Prerequisites:</h6>
+            <ul>
+              <li>JavaScript / TypeScript</li>
+              <li>Java / Kotlin</li>
+              <li>.NET Core / C#</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h3 class="card-title">🌐 IEEE SB UniWA Website</h3>
+            <p class="card-text">Creation of the official IEEE SB UniWA website with modern architecture, responsive design, and interactive elements.</p>
+            <h6>Prerequisites:</h6>
+            <ul>
+              <li>React / Elysia / Next.js</li>
+              <li>JavaScript / TypeScript</li>
+              <li>MongoDB</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h3 class="card-title">🅿️ UniWA Parking</h3>
+            <p class="card-text">Web app showing real-time parking availability using AI and Raspberry Pi devices.</p>
+            <h6>Prerequisites:</h6>
+            <ul>
+              <li>Python</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+    </div>
+  </main>
+
+  <script>
+    // Basic tab switching
+    const tabs = document.querySelectorAll('.nav-item');
+    const main = document.getElementById('main-content');
+
+    const content = {
+      home: `
+      <div class="section">
+        <h1 style="text-align: center;">💻 Welcome to the Software Scientific Group Hub of IEEE SB UniWA</h1>
+        <br>
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h2 class="card-title">🏠 Home</h2>
+            <p class="card-text">
+              🎓 This is the main hub for our members interested in learning about the tools we use in our projects. Explore the side menu to access our training guide.
+            </p>
+            <p>Explore the side menu to access our training guide.</p>
+          </div>
+        </div>
+
+        <h2 style="text-align: center;">Our Projects</h2>
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h3 class="card-title">📅 My UniWA Schedule</h3>
+            <p class="card-text">Development of an app and web platform that allows students to organize and track their course schedule.</p>
+            <h6>Prerequisites:</h6>
+            <ul>
+              <li>JavaScript / TypeScript</li>
+              <li>Java / Kotlin</li>
+              <li>.NET Core / C#</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h3 class="card-title">🌐 IEEE SB UniWA Website</h3>
+            <p class="card-text">Creation of the official IEEE SB UniWA website with modern architecture, responsive design, and interactive elements.</p>
+            <h6>Prerequisites:</h6>
+            <ul>
+              <li>React / Elysia / Next.js</li>
+              <li>JavaScript / TypeScript</li>
+              <li>MongoDB</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h3 class="card-title">🅿️ UniWA Parking</h3>
+            <p class="card-text">Web app showing real-time parking availability using AI and Raspberry Pi devices.</p>
+            <h6>Prerequisites:</h6>
+            <ul>
+              <li>Python</li>
+              <li>Docker</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h3 class="card-title">💻 Competitive Programming</h3>
+            <p class="card-text">Preparation team for IEEEXtreme and GRCPC focusing on algorithms, data structures, and problem-solving.</p>
+          </div>
+        </div>
+      </div>
+    `,
+
+      git: `
+      <div class="section">
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h1 class="card-title">🐙 Git / GitHub</h1>
+            <h2>Version Control Basics</h2>
+            <p class="card-text">
+              Study the Git and GitHub fundamentals provided in our Drive. Once you’re confident, take the quiz below to test your knowledge!
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9s0P16gw6QuKMbi6Eb2w0xVbn1d3mvjV_h1_K1wyy_Jjm7w/viewform?usp=dialog" 
+              target="_blank" class="btn btn-primary mt-2">
+              Open Google Form
+            </a>
+          </div>
+        </div>
+      </div>
+    `,
+
+      code: `
+      <div class="section">
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h1 class="card-title">👨‍💻 C# / Java</h1>
+            <h2>Programming Tutorials</h2>
+            <p class="card-text">
+              Study a tutorial for the language you want to learn, then complete the library project to test your new skills.
+            </p>
+            <ul>
+              <li>📘 <a href="https://www.youtube.com/watch?v=GhQdlIFylQ8" target="_blank" class="text-info">C# Tutorial (YouTube)</a></li>
+              <li>📗 <a href="https://www.youtube.com/watch?v=A74TOX803D0" target="_blank" class="text-info">Java Tutorial (YouTube)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h1 class="card-title">📚 Library Management System – Project Description</h1>
+            <pre><code>
+Library Management System
+-------------------------
+
+Overview:
+- Object-oriented project simulating library operations:
+    managing books, borrowing/returning, tracking availability.
+- Demonstrates OOP principles: encapsulation, inheritance, polymorphism.
+- Extensible through subclasses like DigitalBook.
+
+Class Structure:
+----------------
+
+1. Book
+- Fields (private):
+    title : String
+    author : String
+    isbn : String
+    isAvailable : boolean
+- Constructor:
+    Book(title, author, isbn) → isAvailable = true
+- Methods:
+    getTitle()
+    getAuthor()
+    getIsbn()
+    isAvailable()
+    borrowBook() → sets isAvailable = false
+    returnBook() → sets isAvailable = true
+    toString() → "Title by Author (ISBN: xxx)"
+
+2. DigitalBook (extends Book)
+- Additional Field:
+    fileSizeMB : double
+- Constructor:
+    DigitalBook(title, author, isbn, fileSizeMB)
+- Additional Method:
+    getFileSizeMB()
+- Override:
+    toString() → "Title by Author (ISBN: xxx, File Size: y MB)"
+
+3. User
+- Fields:
+    name : String
+    borrowedBooks : ArrayList
+- Constructor:
+    User(name)
+- Methods:
+    getName()
+    borrow(book) → adds to borrowedBooks if available
+    returnBook(book) → removes from borrowedBooks, sets available
+    getBorrowedBooks()
+
+4. Library
+- Fields:
+    books : ArrayList
+    totalBooks : static int
+- Constructor:
+    Library()
+- Methods:
+    addBook(book) → adds book, increments totalBooks
+    searchByTitle(title) → returns book or null
+    getAllBooks()
+    borrowBook(user, title) → boolean
+    returnBook(user, title) → boolean
+    getTotalBooks() → static int
+
+Console Menu (Optional):
+-----------------------
+1. Add Book
+2. View All Books
+3. Borrow Book
+4. Return Book
+5. Exit
+
+Learning Objectives:
+-------------------
+- Class design and encapsulation
+- Inheritance and method overriding
+- Static fields and class-level data
+- ArrayList/List collection management
+- Console input and basic CRUD operations
+            </code></pre>
+          </div>
+        </div>
+      </div>
+    `,
+    };
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const target = tab.dataset.tab;
+        main.innerHTML = content[target];
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>
