@@ -137,6 +137,7 @@
     <div class="nav-item" data-tab="code"><span>💻</span> C# / Java</div>
     <div class="nav-item" data-tab="api"><span>🌐</span> Restful APIs</div>
     <div class="nav-item" data-tab="mobile"><span>📱</span> Mobile App Development</div>
+    <div class="nav-item" data-tab="web"><span>🕸️</span> Web Development</div>
   </aside>
 
   <!-- Main Content -->
@@ -304,6 +305,20 @@
           </div>
         </div>
       </div>
+      <div class="section">
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h3 class="card-title">🌐 IEEE SB UniWA Website</h3>
+            <p class="card-text">
+              If you want to participate in the development of our website you will need a good grasp of web develpment fundimentals. Visit the following training modules:
+              <ul>
+                <li>Git & GitHub module since all teams use them for version control.</li>
+                <li>Web Development module</li> 
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
     `,
       git: `
       <div class="section">
@@ -332,8 +347,10 @@
             <p class="card-text">
               Study a tutorial for the language you want to learn, then complete the library project to test your new skills.
             </p>
+            <br>
             <ul>
               <li>📘 <a href="https://www.youtube.com/watch?v=GhQdlIFylQ8" target="_blank" class="text-info">C# Tutorial (YouTube)</a></li>
+              <br>
               <li>📗 <a href="https://www.youtube.com/watch?v=A74TOX803D0" target="_blank" class="text-info">Java Tutorial (YouTube)</a></li>
             </ul>
           </div>
@@ -437,6 +454,7 @@ Learning Objectives:
             <p class="card-text">
               Study the tutorial and then complete the library project to test your new skills.
             </p>
+            <br>
             <p>📘 <a href="https://www.youtube.com/watch?v=Y2DpFNHtjA8" target="_blank" class="text-info">Tutorial (YouTube)</a></p>
           </div>
         </div>
@@ -529,6 +547,7 @@ Tools & Frameworks:
             <p class="card-text">
               Study the tutorial and then complete the project to test your new skills.
             </p>
+            <br>
             <p>📘 <a href="https://www.youtube.com/watch?v=tZvjSl9dswg" target="_blank" class="text-info">Tutorial (YouTube)</a></p>
           </div>
         </div>
@@ -612,6 +631,115 @@ Deliverables:
         </div>
       </div>
     `,
+    web:`
+    <div class="section">
+        <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h1 class="card-title">🕸️ Web Development</h1>
+            <h2>Programming Tutorials</h2>
+            <p class="card-text">
+              Study the tutorials for the following technologies and complete the library project to test your new skills.
+            </p>
+            <br>
+            <ul>
+              <li>📗 <a href="https://www.youtube.com/watch?v=d56mG7DezGs" target="_blank" class="text-info">Typescript Tutorial (YouTube)</a></li>
+              <br>
+              <li>📗 <a href="https://www.youtube.com/watch?v=6biMWgD6_JY" target="_blank" class="text-info">Tailwind Tutorial (YouTube)</a></li>
+              <br>
+              <li>📗 <a href="https://www.youtube.com/watch?v=SqcY0GlETPk" target="_blank" class="text-info">React js Tutorial (YouTube)</a></li>
+              <br>
+              <li>📗 <a href="https://www.youtube.com/watch?v=ZVnjOPwW4ZA" target="_blank" class="text-info">Next js Tutorial (YouTube)</a></li>
+            </ul>
+            </div>
+        </div>
+            <div class="card bg-dark text-light shadow mb-4">
+          <div class="card-body">
+            <h1 class="card-title">📝 QuickNotes — Build Your First React & TypeScript App</h1>
+            <pre><code>
+QuickNotes – Project Description
+
+Objective:
+Build a small note-taking web app using TypeScript, Tailwind CSS, React, and Next.js. The goal is to apply what you learned in the tutorials 
+to create a simple but functional project.
+
+---
+
+Project Overview:
+Create a web app called QuickNotes that allows users to:
+- Add a new note
+- View all existing notes
+- Delete a note
+
+Notes should appear immediately after being added. As an optional enhancement, store notes in localStorage so they remain after a page refresh.
+
+---
+
+Tech Stack:
+- Next.js for app structure and routing
+- React with TypeScript for components and state
+- Tailwind CSS for styling and responsive design
+
+---
+
+Core Features:
+1. Add Note  
+   Users can type a note and click "Add" to display it on the screen.
+
+2. View Notes  
+   All notes are displayed in a clean, readable layout.
+
+3. Delete Note  
+   Each note has a delete button that removes it from the list.
+
+---
+
+Optional Features:
+- Save notes to localStorage
+- Add light/dark mode using Tailwind
+- Prevent adding empty notes
+- Add simple animations for adding or deleting notes
+- Include a small search bar to filter notes
+
+---
+
+Suggested File Structure:
+quicknotes/
+  pages/
+    index.tsx  → main page (input + list)
+    about.tsx  → optional about page
+  components/
+    NoteInput.tsx
+    NoteList.tsx
+  styles/
+    globals.css
+
+---
+
+Example TypeScript Interface:
+interface Note {
+  id: number;
+  text: string;
+}
+
+---
+
+Styling Tips:
+- Center the app content and use a clean card-style layout
+- Add padding, rounded corners, and shadows for a modern look
+- Use Tailwind utility classes for responsive design
+
+---
+
+Deliverables:
+- A working Next.js app that can add, view, and delete notes
+- A short README explaining how the app works
+
+</code></pre>
+
+          </div>
+          </div>
+        </div>
+    `
     };
 
     tabs.forEach(tab => {
