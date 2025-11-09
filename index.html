@@ -133,6 +133,7 @@
     <h2>Navigation</h2>
     <div class="nav-item active" data-tab="home"><span>🏠</span> Home</div>
     <div class="nav-item" data-tab="bootcamp"><span>📖</span> Training Guide</div>
+    <div class="nav-item" data-tab="basics"><span>👨🏻‍💻</span> Programming Basics</div>
     <div class="nav-item" data-tab="git"><span>🐙</span> Git / GitHub</div>
     <div class="nav-item" data-tab="code"><span>💻</span> C# / Java</div>
     <div class="nav-item" data-tab="api"><span>🌐</span> Restful APIs</div>
@@ -144,67 +145,71 @@
   <main class="main" id="main-content">
     <div class="section" id="home">
       <h1 style="text-align: center;">💻 Welcome to the Software Scientific Group Hub of IEEE SB UniWA</h1>
-        <br>
-        <div class="card bg-dark text-light shadow mb-4">
-          <div class="card-body">
-            <h2 class="card-title">🏠 Home</h2>
-            <p class="card-text">
-              🎓 This is the main hub for our members interested in learning about the tools we use in our projects. Explore the side menu to access our training guide.
-            </p>
-          </div>
-        </div>
-
-        <h2 style="text-align: center;">Our Projects</h2>
-        <div class="card bg-dark text-light shadow mb-4">
-          <div class="card-body">
-            <h3 class="card-title">📅 My UniWA Schedule</h3>
-            <p class="card-text">Development of an app and web platform that allows students to organize and track their course schedule.</p>
-            <h6>Prerequisites:</h6>
-            <ul>
-              <li>JavaScript / TypeScript</li>
-              <li>Java / Kotlin</li>
-              <li>.NET Core / C#</li>
-              <li>Docker</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card bg-dark text-light shadow mb-4">
-          <div class="card-body">
-            <h3 class="card-title">🌐 IEEE SB UniWA Website</h3>
-            <p class="card-text">Creation of the official IEEE SB UniWA website with modern architecture, responsive design, and interactive elements.</p>
-            <h6>Prerequisites:</h6>
-            <ul>
-              <li>React / Elysia / Next.js</li>
-              <li>JavaScript / TypeScript</li>
-              <li>MongoDB</li>
-              <li>Docker</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="card bg-dark text-light shadow mb-4">
-          <div class="card-body">
-            <h3 class="card-title">🅿️ UniWA Parking</h3>
-            <p class="card-text">Web app showing real-time parking availability using AI and Raspberry Pi devices.</p>
-            <h6>Prerequisites:</h6>
-            <ul>
-              <li>Python</li>
-              <li>Docker</li>
-              <li>Raspberry Pi</li>
-              <li>AI / YOLO model</li>
-              <li>Web development basics</li>
-              <li>Git &amp; GitHub</li>
-            </ul>
-          </div>
-    </div>
-    <div class="card bg-dark text-light shadow mb-4">
-          <div class="card-body">
-            <h3 class="card-title">💻 Competitive Programming</h3>
-            <p class="card-text">Preparation team for IEEEXtreme and GRCPC focusing on algorithms, data structures, and problem-solving.</p>
-          </div>
+      <br>
+      <div class="card bg-dark text-light shadow mb-4">
+        <div class="card-body">
+          <h2 class="card-title">🏠 Home</h2>
+          <p class="card-text">
+            🎓 This is the main hub for our members interested in learning about the tools we use in our projects.
+            Explore the side menu to access our training guide.
+          </p>
         </div>
       </div>
+
+      <h2 style="text-align: center;">Our Projects</h2>
+      <div class="card bg-dark text-light shadow mb-4">
+        <div class="card-body">
+          <h3 class="card-title">📅 My UniWA Schedule</h3>
+          <p class="card-text">Development of an app and web platform that allows students to organize and track their
+            course schedule.</p>
+          <h6>Prerequisites:</h6>
+          <ul>
+            <li>JavaScript / TypeScript</li>
+            <li>Java / Kotlin</li>
+            <li>.NET Core / C#</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card bg-dark text-light shadow mb-4">
+        <div class="card-body">
+          <h3 class="card-title">🌐 IEEE SB UniWA Website</h3>
+          <p class="card-text">Creation of the official IEEE SB UniWA website with modern architecture, responsive
+            design, and interactive elements.</p>
+          <h6>Prerequisites:</h6>
+          <ul>
+            <li>React / Elysia / Next.js</li>
+            <li>JavaScript / TypeScript</li>
+            <li>MongoDB</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card bg-dark text-light shadow mb-4">
+        <div class="card-body">
+          <h3 class="card-title">🅿️ UniWA Parking</h3>
+          <p class="card-text">Web app showing real-time parking availability using AI and Raspberry Pi devices.</p>
+          <h6>Prerequisites:</h6>
+          <ul>
+            <li>Python</li>
+            <li>Docker</li>
+            <li>Raspberry Pi</li>
+            <li>AI / YOLO model</li>
+            <li>Web development basics</li>
+            <li>Git &amp; GitHub</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card bg-dark text-light shadow mb-4">
+        <div class="card-body">
+          <h3 class="card-title">💻 Competitive Programming</h3>
+          <p class="card-text">Preparation team for IEEEXtreme and GRCPC focusing on algorithms, data structures, and
+            problem-solving.</p>
+        </div>
+      </div>
+    </div>
   </main>
 
   <script>
@@ -279,7 +284,7 @@
         </div>
       </div>
     `,
-    bootcamp: `
+      bootcamp: `
       <div class="section">
         <div class="card bg-dark text-light shadow mb-4">
           <div class="card-body">
@@ -334,6 +339,130 @@
           </div>
         </div>
       </div>
+    `,
+      basics: `
+      <div class="section">
+    <div class="card bg-dark text-light shadow mb-4">
+      <div class="card-body">
+        <h1 class="card-title">👨‍💻 Programming Basics</h1>
+        <h2>Learning and Practice</h2>
+        <p class="card-text">
+          Study a beginner-friendly tutorial on C programming and fundamental programming concepts, then complete the final project to test your skills.
+        </p>
+        <br>
+        <ul>
+          <li>📘 <a href="https://www.youtube.com/watch?v=KJgsSFOSQv0" target="_blank" class="text-info">C Programming Tutorial (YouTube)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card bg-dark text-light shadow mb-4">
+      <div class="card-body">
+        <h1 class="card-title">💻 Project Description</h1>
+        <pre><code>
+Student Record Management System
+--------------------------------
+
+This project is a hands-on application designed to help learners practice and consolidate their core C programming skills. Students will build a 
+menu-driven console application that manages student records, allowing users to add, view, search, and delete student information. The project 
+covers fundamental programming concepts such as variables, data types, control flow, loops, functions, arrays, pointers, structures, and file 
+handling. By completing this project, learners gain practical experience in modular program design, working with data structures, and implementing 
+persistent storage, providing a solid foundation for more advanced C programming projects.
+
+Overview:
+- Console-based system to manage student records: Roll Number, Name, Marks.
+- Menu-driven interface with options to add, display, search, delete, save, and load records.
+- Integrates fundamental C programming concepts.
+
+Core Concepts Covered:
+----------------------
+- Variables & Data Types: storing student info and menu choices
+- Control Flow: menu navigation (if, switch)
+- Loops: repeating menu until exit
+- Functions: modularizing operations (add, display, search, delete)
+- Arrays: storing multiple student records
+- Pointers: passing data between functions
+- Structures: grouping student data (name, roll, marks)
+- File Handling: saving/loading records persistently
+
+Core Features & Logic:
+----------------------
+1. Add Student
+   - Input name, roll, marks
+   - Store in an array of struct Student
+   - Increment record count
+
+2. Display All Students
+   - Loop through array
+   - Print details in a formatted table
+
+3. Search Student
+   - Input roll number
+   - Loop to find matching record
+   - Display if found, otherwise “Not found”
+
+4. Delete Student
+   - Input roll number
+   - Shift array elements to overwrite deleted record
+   - Decrease record count
+
+5. File Handling
+   - Use fopen(), fprintf(), fscanf() to write/read students.txt
+   - Optionally load records at program start
+
+6. Menu System
+   - while(1) loop with switch for user choices
+   - Exit on user command
+
+Data Structure Example:
+----------------------
+struct Student {
+    int roll;
+    char name[50];
+    float marks;
+};
+
+Suggested Functions:
+-------------------
+void addStudent(struct Student s[], int *count);
+void displayStudents(struct Student s[], int count);
+void searchStudent(struct Student s[], int count);
+void deleteStudent(struct Student s[], int *count);
+void saveToFile(struct Student s[], int count);
+void loadFromFile(struct Student s[], int *count);
+
+Example Menu:
+-------------
+=============================
+ Student Record System
+=============================
+1. Add Student
+2. Display All Students
+3. Search Student
+4. Delete Student
+5. Save to File
+6. Load from File
+7. Exit
+Enter your choice: _
+
+Extension Ideas (Optional):
+---------------------------
+- Sort students by marks or name
+- Calculate class average
+- Password-protect file operations
+- Add GPA conversion system
+
+Learning Outcomes:
+------------------
+- Understand modular design in C
+- Apply file handling to real-world use cases
+- Practice memory management & data structures
+- Strengthen logic and debugging skills
+- Gain confidence writing complete programs from scratch
+        </code></pre>
+      </div>
+    </div>
+</div>
     `,
       git: `
       <div class="section">
@@ -460,7 +589,7 @@ Learning Objectives:
         </div>
       </div>
     `,
-    api: `
+      api: `
       <div class="section">
         <div class="card bg-dark text-light shadow mb-4">
           <div class="card-body">
@@ -553,7 +682,7 @@ Tools & Frameworks:
         </div>
       </div>
     `,
-    mobile: `
+      mobile: `
       <div class="section">
         <div class="card bg-dark text-light shadow mb-4">
           <div class="card-body">
@@ -646,7 +775,7 @@ Deliverables:
         </div>
       </div>
     `,
-    web:`
+      web: `
     <div class="section">
         <div class="card bg-dark text-light shadow mb-4">
           <div class="card-body">
@@ -768,4 +897,5 @@ Deliverables:
   </script>
 
 </body>
+
 </html>
