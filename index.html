@@ -352,13 +352,14 @@
         <br>
         <ul>
           <li>📘 <a href="https://www.youtube.com/watch?v=KJgsSFOSQv0" target="_blank" class="text-info">C Programming Tutorial (YouTube)</a></li>
-        </ul>
+          <li>📘 <a href="https://www.youtube.com/watch?v=HXV3zeQKqGY" target="_blank" class="text-info">Sql Tutorial (YouTube)</a></li>
+          </ul>
       </div>
     </div>
 
     <div class="card bg-dark text-light shadow mb-4">
       <div class="card-body">
-        <h1 class="card-title">💻 Project Description</h1>
+        <h1 class="card-title">💻 C Programming Project Description</h1>
         <pre><code>
 Student Record Management System
 --------------------------------
@@ -462,6 +463,114 @@ Learning Outcomes:
         </code></pre>
       </div>
     </div>
+</div>
+
+<div class="card bg-dark text-light shadow mb-4">
+      <div class="card-body">
+        <h1 class="card-title">💻 Sql Project Description</h1>
+        <pre><code>
+IEEE Branch Management Database
+--------------------------------
+
+This project is a hands-on exercise designed to help learners practice and consolidate their core SQL and relational database skills. 
+Students will design and build a database schema to manage an IEEE Student Branch, allowing them to track members, hosted events, and attendance 
+records. The project covers fundamental database concepts such as Data Definition Language (DDL), primary and foreign keys, data manipulation 
+(INSERT), filtering, table joins, and aggregate functions. By completing this project, learners gain practical experience in structuring 
+relational data, writing complex queries, and extracting actionable insights, providing a solid foundation for backend development and data 
+engineering.
+
+Overview:
+- Relational database system to manage IEEE branch records: Members, Events, and Attendance.
+- Script-driven implementation covering schema creation, data insertion, and analytical querying.
+- Integrates fundamental SQL programming and database design concepts.
+
+Core Concepts Covered:
+----------------------
+- DDL (Data Definition Language): Creating tables and assigning appropriate data types
+- Relational Design: Implementing Primary Keys and Foreign Keys mapping
+- DML (Data Manipulation Language): Populating tables with dummy data
+- Basic Querying: Using SELECT, WHERE, and ORDER BY to filter and sort records
+- Joins: Using INNER JOIN and LEFT JOIN to combine data across multiple tables
+- Aggregation: Using GROUP BY and COUNT() to summarize data sets
+
+Core Features & Logic:
+----------------------
+1. Database Schema Setup
+   - Design three tables: Members, Events, and Attendance.
+   - Assign primary keys to uniquely identify records.
+   - Set up foreign keys in the Attendance table to link Members and Events.
+
+2. Data Insertion
+   - Write INSERT statements to populate the database.
+   - Add a diverse set of members with different majors.
+   - Add various events (e.g., Workshops, Hackathons).
+   - Create attendance records mapping members to the events they attended.
+
+3. Basic Retrieval & Filtering
+   - Query the directory to list all members sorted alphabetically.
+   - Filter members to find specific demographics (e.g., all "Computer Science" majors).
+
+4. Cross-Table Joins
+   - Write queries that join the Members, Attendance, and Events tables.
+   - Generate an "Event Roster" showing the first and last names of attendees for a specific event.
+
+5. Aggregation & Reporting
+   - Group attendance records by event.
+   - Use aggregate functions to count attendees and determine the most popular events.
+
+Data Structure Example (Schema Snippet):
+----------------------------------------
+CREATE TABLE Members (
+    MemberID INT PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    Major VARCHAR(100),
+    JoinDate DATE
+);
+
+CREATE TABLE Attendance (
+    RecordID INT PRIMARY KEY,
+    MemberID INT,
+    EventID INT,
+    FOREIGN KEY (MemberID) REFERENCES Members(MemberID),
+    FOREIGN KEY (EventID) REFERENCES Events(EventID)
+);
+
+Suggested Scripts/Deliverables:
+-------------------------------
+- 01_create_schema.sql: Contains all CREATE TABLE statements.
+- 02_insert_data.sql: Contains all INSERT INTO statements for dummy data.
+- 03_analysis_queries.sql: Contains the SELECT queries to answer the executive committee's requests.
+
+Example Query Request & Output:
+-------------------------------
+Request: "Show the total attendance for each event, sorted highest to lowest."
+
+Expected Output Format:
+=======================================
+ EventName            | TotalAttendees
+=======================================
+ Intro to Python      | 45
+ Resume Workshop      | 32
+ Spring Hackathon     | 28
+ General Meeting      | 15
+
+Extension Ideas (Optional):
+---------------------------
+- Add a LEFT JOIN query to find members who have not attended any events.
+- Create a SQL VIEW that automatically calculates the total events attended per member.
+- Add an "Officers" table and link it to events to track which officer organized which event.
+- Implement constraints (e.g., NOT NULL, UNIQUE emails).
+
+Learning Outcomes:
+------------------
+- Understand relational database normalization and schema design.
+- Apply primary and foreign keys to enforce data integrity.
+- Practice writing efficient queries to retrieve specific datasets.
+- Strengthen logic in combining tables using different types of joins.
+- Gain confidence in turning raw data into meaningful reports.
+        </code></pre>
+      </div>
 </div>
     `,
       git: `
